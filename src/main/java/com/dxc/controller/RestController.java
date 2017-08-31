@@ -91,9 +91,9 @@ public class RestController {
 		}
 	}
 
-	@RequestMapping(value = "/showAllTestSuite/{projectName}", method = RequestMethod.GET, produces = "application/json; charset=UTF-8")
-	public List<ProjectDTO> showTestSuite(@PathVariable String projectName) {
-		return projectService.getAll();
+	@RequestMapping(value = "/showTestCase/{projectName}", method = RequestMethod.GET, produces = "application/json; charset=UTF-8")
+	public List<TestCaseDTO> showTestSuite(@PathVariable String projectName) {
+		return testCaseService.getTestCaseFourWeek();
 	}
 
 }

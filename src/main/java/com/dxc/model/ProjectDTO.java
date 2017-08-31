@@ -25,7 +25,7 @@ public class ProjectDTO implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	@Column(name = "ProjectName")
+	@Column(name = "ProjectName", unique = true)
 	private String name;
 	
 	@OneToMany(mappedBy = "project", fetch = FetchType.LAZY)
